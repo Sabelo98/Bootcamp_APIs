@@ -1,0 +1,36 @@
+### words widget api 
+GET http://localhost:3007/api/word_game?sentence=the sentence you want to analyze
+content-type: application/json
+
+
+
+### phonebill total 
+POST http://localhost:3007/api/phonebill/total
+content-type: application/json
+{
+    "bill": "call,sms,call"
+}
+
+### prices of a call and an sms prices
+GET http://localhost:3007/api/phonebill/prices
+content-type: application/json
+{
+ "call" : 2.75,
+ "sms" : 0.65
+}
+
+### set the price of a call or sms
+POST http://localhost:3007/api/phonebill/price
+content-type: application/json
+{
+  "type" : "sms",
+  "price" : 2.85
+}
+
+### enough airtime 
+POST http://localhost:3007/api/enough
+content-type: application/json
+{
+   "usage": "call,sms,call",
+   "available" : 54
+}
